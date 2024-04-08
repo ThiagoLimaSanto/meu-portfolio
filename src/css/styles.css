@@ -1,0 +1,219 @@
+html{
+    color: #fff; /*pinta a fonte toda de branca*/
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif; /*fonte*/
+    margin: 0 auto; /*centraliza o corpo no meio na vertical e deixa automatico na horizontal*/
+    max-width: 1120px; /*da um espaco de 1120px*/
+    background: linear-gradient(150deg, #000000, #9e00ff);
+    background-size:  120% 120%;
+}
+
+.cabecalho{ /*estilo da classe cabecalho*/
+    display: flex; /*alinha os elementos do cabecalho na mesma linha*/
+    justify-content: space-between; /*da um espaco entre os elementos*/
+    align-items: center; /*os elementos centraliza no meio do cabecalho*/
+    padding: 30px 15px; /*da espaco de 30px vertical e 15px horizontal*/
+}
+
+.cabecalho .logo{ /*estilo da classe logo que esta dentro da classe cabecalho*/
+    width: 65px; /*largura do logo*/
+    height: 65px; /*altura do logo*/
+    border-radius: 50%; /*meche na borda, partindo de quadrado para um circulo*/
+    border: 2px solid #fff; /*vai mecher na borda do logo, 2px de tamanho, solido e cor*/
+    text-decoration: underline; /*sublinha o texto*/
+    text-align: center; /*centraliza o texto*/
+    line-height: 55px; /*altura da linha do underline*/
+
+    font-family: "Raleway", sans-serif;
+    transition: 0.5s; /*da uma transicao quando o mouse passa no logo*/
+}
+
+.cabecalho a:hover .logo{  /*quando passar o mouse encima da logo vai acontecer alguma coisa*/
+    color: #9443d9; /*altera a cor da logo*/
+    border: 2px solid #9443d9; /*muda a cor da borda do logo*/
+}
+
+.cabecalho .menu li a{
+    font-size: 20px; /*tamanho da fonta do texto*/
+    text-transform: capitalize; /**/
+    padding: 10px 20px; /* espacamento interno do elemento*/
+    transition: 0.5s;
+}
+
+.cabecalho .menu li a:hover{ /* faca algo quando passar o mouse encima do elemento*/
+    background-color: #9443d8;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.home{
+    display: flex; /*centraliza os elementos na mesma linha*/
+    min-height: calc(100vh - 125px); /*100% do elemento na tela menos 125px*/
+    align-items: center; /* alinha verticalmente o elemento*/
+    gap: 50px; /*separacao de 50px entre os elementos*/
+    justify-content: space-between; /*espacamento entre os elementos*/
+}
+
+.home .informacoes{
+    display: flex;  /*centraliza os elementos na mesma linha*/
+    flex-direction: column; /*deixa os elementos um debaixo do outro*/
+    gap: 15px; /*separacao de 15px entre os elementos*/
+    letter-spacing: 2px; /*separa um pouco as palavras*/
+    padding: 0 15px; /*mexe na parte interna do elemento*/
+    max-width: 50%; /*mexe no tamanho do elemento referente a div, 50% vai ocupar so metade do espaco*/
+}
+
+.home .informacoes h1{
+    font-family: "Raleway", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.home .informacoes p{
+    font-family: "Raleway";
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home .rede-sociais{
+    display: flex;
+    gap: 20px;
+}
+
+.home .rede-sociais a i{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.5s;
+}
+
+.home .rede-sociais a i:hover{
+    color: #9443d8;
+    border: 1px solid #9443d8;
+    transform: scale(1.1);
+}
+
+.home .container-foto .foto{
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.home .container-foto img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home .foto.sombra-interna{ 
+    background: linear-gradient(to right, #8a35c8, #18c063, #00eea2);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.projetos{
+    padding: 70px 0 70px;
+
+}
+
+.projetos .titulo{
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.projetos .container-projetos{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto{
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+
+.projetos .projeto.ativo{
+    display: block;
+}
+
+.projetos .projeto img{
+    height: 100%;
+}
+
+.projetos .projeto h3{
+    background-color: #040203;
+	width: 100%;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	position: absolute;
+	bottom: 0;
+}
+
+.projetos .projeto .informacoes-projetos{
+    background-color: #040203;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-weight: 600;
+	opacity: 0;
+	transition: 0.3s;
+	padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projetos{
+    opacity: 0.7;
+    background-color: #000;
+}
+
+.projetos .btn-mostrar-projetos{
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover{
+    background-color: #9443d8;
+    transition: 0.5s;
+}
+
+.projetos .btn-mostrar-projetos.remover{
+    display: none;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
